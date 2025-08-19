@@ -1,0 +1,143 @@
+.app-header nav {
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 35px 40px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.app-header .logo a {
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 800;
+  color: #fff9f9;
+  letter-spacing: 2px;
+  
+}
+
+.app-header .logo a span {
+  color: #ff276f;
+}
+
+.app-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.app-header nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 48px 18px;
+  transition: all 0.3s ease-in-out;
+}
+
+.app-header a.active,
+.app-header nav ul li a:hover {
+  background: #ff276f;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.app-header .nav-icons a {
+  font-size: 18px;
+  margin-left: 20px;
+  padding: 10px 16px;
+  border-radius: 6px;
+}
+
+.app-header #btn-login {
+  text-decoration: none;
+  background: #ff276f;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 48px;
+  border-radius: 0;
+}
+
+.logout {
+  text-align: none;
+  background: #ff276f;
+  text-decoration: none;
+  padding: 80px 16px;
+
+}
+#logout{
+  padding: 50px 16px;
+   border-radius: 0;
+}
+
+.logout span {
+  font-weight: 600;
+  font-size: 19px;
+  color: #ffffff;
+}
+
+/* 🔹 Hamburger menu */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 📱 Mobilní verze */
+@media (max-width: 992px) {
+  .app-header nav {
+    padding: 30px 25px;
+  }
+
+  .app-header .logo a {
+    font-size: 26px;
+  }
+
+  .app-header nav ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #222;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .app-header nav ul.active {
+    max-height: 500px; /* menu se vysune */
+    padding: 20px 0;
+  }
+
+  .app-header nav ul li {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-icons {
+    display: none; /* ikonky vedle menu na mobilech schovám */
+  }
+}
+
+/* 📱 Extra malé telefony */
+@media (max-width: 480px) {
+  .app-header .logo a {
+    font-size: 22px;
+  }
+
+  .app-header nav ul li a {
+    font-size: 16px;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,20 @@
+/* Import Google Fonts for use in the project */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset and global styles */
+* {
+   font-family: "Open Sans", sans-serif; /* Set default font for all elements */
+   margin: 0;  /* Remove default margin */
+   padding: 0; /* Remove default padding */
+   box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Ensure body takes full width */
+body {
+   width: 100%;
+}
+
+/* Specific styles applied when user is logged in */
+body.logged {
+   min-height: 0; /* Reset min-height (can be used for layouts or dashboards) */
+}

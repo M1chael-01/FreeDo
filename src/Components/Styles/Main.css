@@ -1,0 +1,245 @@
+/* 🌟 Main wrapper */
+.main-welcome {
+  margin-top: 20vh;
+  margin-right: auto;
+  max-width:1000px;
+  padding: 0 20px;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+/* Dashboard grid container (SaaS style) */
+.dashboard-flex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+/* 🔹 Card styles */
+.create,
+.task-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  padding: 24px;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.create:hover,
+.task-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+/* 🔹 Create card */
+.create span {
+  font-size: 2.5rem;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  margin: 0 auto 12px auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.create span:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(99,102,241,0.4);
+}
+
+.create-text {
+  text-align: center;
+}
+
+.create-text h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.create-text p {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* 🔹 Task card */
+.task-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.task-content p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 12px;
+}
+
+.task-content small {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* Buttons container */
+.task-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+/* 🔹 Buttons */
+.task-actions button {
+  flex: 1;
+  padding: 10px 16px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: white;
+}
+
+/* Edit button */
+.edit-btn {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+}
+
+.edit-btn:hover {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  box-shadow: 0 6px 15px rgba(99,102,241,0.4);
+  transform: translateY(-2px);
+}
+
+/* Delete button */
+.delete-btn {
+  background: linear-gradient(135deg, #ef4444, #f87171);
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #f87171, #ef4444);
+  box-shadow: 0 6px 15px rgba(239,68,68,0.4);
+  transform: translateY(-2px);
+}
+
+/* Show more button */
+.show-more-btn {
+  background: none;
+  border: none;
+  color: #4b5563;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.show-more-btn:hover {
+  color: #111827;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .create, .task-card {
+    min-height: 180px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-flex {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .create span {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+
+  .create-text h2 {
+    font-size: 1rem;
+  }
+
+  .create-text p {
+    font-size: 0.8rem;
+  }
+
+  .task-content h3 {
+    font-size: 1rem;
+  }
+
+  .task-content p {
+    font-size: 0.8rem;
+  }
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 80px;
+}
+
+.search-input {
+  flex: 0.5;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+
+}
+
+.status-filter {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.badge {
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 12px;
+  color: white;
+}
+
+.badge.done {
+  background: #10b981;
+}
+
+.badge.overdue {
+  background: #ef4444;
+}
+
+.badge.pending {
+  background: #f59e0b;
+}
+
+.loader {
+  font-size: 1rem;
+  color: #6b7280;
+  text-align: center;
+  width: 100%;
+  grid-column: 1/-1;
+}

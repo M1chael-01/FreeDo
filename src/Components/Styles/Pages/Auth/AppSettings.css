@@ -1,0 +1,104 @@
+.app-settings-container {
+  max-width: 1000px;
+  margin: 10rem auto;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+  color: #333;
+}
+
+.app-settings-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.app-settings-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  background: #ff276f;;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.app-settings-header p {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+.app-info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.app-info-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-info-card.hover-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.app-info-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #111827;
+}
+
+.app-info-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.app-info-card li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.status.ok {
+  color: #ff276f;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.status.error {
+  color: #ef4444;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Uptime bar */
+.uptime-bar {
+  position: relative;
+  background: #e5e7eb;
+  border-radius: 6px;
+  height: 12px;
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+.uptime-progress {
+  background: #ff276f;
+  height: 100%;
+  border-radius: 6px;
+  transition: width 1s ease-in-out;
+}
+
+.uptime-bar span {
+  position: absolute;
+  right: 8px;
+  top: -22px;
+  font-size: 0.85rem;
+  color: #374151;
+}

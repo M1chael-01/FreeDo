@@ -1,0 +1,98 @@
+/* Support Page Styles */
+.support-container {
+  max-width: 1000px;
+  margin: 8rem auto;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+  color: #333;
+}
+
+/* Header */
+.support-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.support-header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.support-header p {
+  font-size: 1.1rem;
+  color: #666;
+  width: 78%;
+  margin: 0 auto;
+  line-height: 30px;
+  text-align: center;
+}
+
+/* Section Titles */
+.support-container section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #ff276f;
+  padding-left: 0.5rem;
+}
+
+/* Service Status */
+.service-status ul {
+  list-style: none;
+  padding: 0;
+}
+.service-status li {
+  background: #f9f9f9;
+  padding: 1.8rem 1rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 20px;
+}
+
+.support-container h2{
+    font-size: 30px;
+}
+
+/* Quick Links */
+.quick-links .links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.link-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+.link-card:hover {
+  background: #f0f8ff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+.contact-info{
+    margin-top: 5vh;
+}
+
+/* Contact Info */
+.contact-info p {
+  font-size: 1.10rem;
+  margin-bottom: 0.4rem;
+}
+.contact-info p:nth-child(2) {
+  color: #666;
+}
+.contact-info p:nth-child(3) {
+  font-weight: 500;
+  color: #ff276f;
+}
+
+
+.support-container h2#heading{
+    font-size: 1.6rem;
+}
